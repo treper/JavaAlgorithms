@@ -3,6 +3,7 @@ package com.ataosky.leetcode;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 //============================================================================
 //Given a collection of numbers, return all possible permutations.
@@ -27,6 +28,13 @@ public class Permutations {
 		dfs(num, 0, results);
 		return results;
 	}
+
+	public ArrayList<ArrayList<Integer>> permutations(
+			int[] num) {
+		ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
+		dfs(num, 0, results);
+		return results;
+	}
 	
 	public void dfs(ArrayList<Integer> num, int start,
 			ArrayList<ArrayList<Integer>> results) {
@@ -45,19 +53,28 @@ public class Permutations {
 
 	}
 
+	public void swap(int[] num,int a,int b){
+		int tmp = num[a];
+		num[a]=num[b];
+		num[b]=tmp;
+	}
 	
 	public void dfs(int[] num, int start,
 			ArrayList<ArrayList<Integer>> results) {
 		if (start == num.length) {
-			ArrayList<Integer> item = new ArrayList<Integer>(num);
+			ArrayList<Integer> item = new ArrayList<Integer>();
+			for(int i:num)
+			{
+				item.add(i);
+			}
 			results.add(item);
 			return;
 		}
 
 		for (int i = start; i < num.length; i++) {
-			Collections.swap(num, start, i);
+			swap(num,start,i);
 			dfs(num, start + 1, results);
-			Collections.swap(num, start, i);
+			swap(num,start,i);
 
 		}
 
@@ -66,10 +83,12 @@ public class Permutations {
 	
 
 	public static void main(String args[]) {
-		ArrayList<Integer> num = new ArrayList<Integer>(Arrays.asList(1, 2, 3));
+//		ArrayList<Integer> num = new ArrayList<Integer>(Arrays.asList(1, 2, 3));
+//		Permutations solution = new Permutations();
+//		ArrayList<ArrayList<Integer>> results = solution.permutations(num);
+		int[] num={1,2,3};
 		Permutations solution = new Permutations();
 		ArrayList<ArrayList<Integer>> results = solution.permutations(num);
-
 		for (ArrayList<Integer> l : results) {
 			for (Integer i : l) {
 				System.out.print(i);

@@ -22,6 +22,10 @@ package com.ataosky.leetcode;
 
 
 public class NextPermutation {
+	
+	public void nextPermutation(int[] num){
+		
+	}
 
 	public static void main(String args[])
 	{
