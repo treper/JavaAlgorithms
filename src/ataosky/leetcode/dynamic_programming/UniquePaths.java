@@ -1,4 +1,4 @@
-package ataoksy.leetcode.dynamic_programming;
+package ataosky.leetcode.dynamic_programming;
 
 
 //============================================================================
