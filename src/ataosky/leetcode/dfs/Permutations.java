@@ -1,4 +1,4 @@
-package com.ataosky.leetcode;
+package ataosky.leetcode.dfs;
 
 import java.util.ArrayList;
 import java.util.Arrays;

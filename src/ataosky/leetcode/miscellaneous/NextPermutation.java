@@ -1,4 +1,7 @@
-package com.ataosky.leetcode;
+package ataosky.leetcode.miscellaneous;
+
+import java.util.Arrays;
+
 
 //============================================================================
 //NextPermutation
@@ -24,13 +27,42 @@ package com.ataosky.leetcode;
 public class NextPermutation {
 	
 	public void nextPermutation(int[] num){
+		//find first element break the descending order
+		int n = num.length;
+		int i;
+		for(i=n-1;i>0;i--)
+		{
+			if(num[i]>num[i-1])
+				break;//15293->15329->15392->15923->15932->19235
+		}
+		if(i==0){
+			Arrays.sort(num);
+			return;
+		}
+		//sort the num[i:end]
+		Arrays.sort(num,i,n);
+		//find first greater than num[i-1],swap them
+		int t = i-1;
+		for(;i<n;i++)
+		{
+			if(num[i]>num[t])
+				break;
+		}
+		int tmp=num[t];
+		num[t]=num[i];
+		num[i]=tmp;
 		
+		for(int j:num)
+		{
+			System.out.print(j);
+		}
 	}
 
 	public static void main(String args[])
 	{
 		NextPermutation solution = new NextPermutation();
-		solution;
+		int[] num={1,3,2};
+		solution.nextPermutation(num);
 		
 	}
 	
