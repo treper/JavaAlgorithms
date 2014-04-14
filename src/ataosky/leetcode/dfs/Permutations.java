@@ -72,8 +72,10 @@ public class Permutations {
 		}
 
 		for (int i = start; i < num.length; i++) {
+			//swap start and current selected item, the current item has been moved to start, so the next round current item will not be visited
 			swap(num,start,i);
 			dfs(num, start + 1, results);
+			//restore
 			swap(num,start,i);
 
 		}
@@ -88,13 +90,7 @@ public class Permutations {
 //		ArrayList<ArrayList<Integer>> results = solution.permutations(num);
 		int[] num={1,2,3};
 		Permutations solution = new Permutations();
-		ArrayList<ArrayList<Integer>> results = solution.permutations(num);
-		for (ArrayList<Integer> l : results) {
-			for (Integer i : l) {
-				System.out.print(i);
-
-			}
-			System.out.println();
-		}
+		ArrayList<ArrayList<Integer>> ret = solution.permutations(num);
+		System.out.println(ret.toString());
 	}
 }

@@ -178,16 +178,9 @@ public class WordLadderII {
 		String end = new String("cog");
 		HashSet<String> dict = new HashSet<String>(Arrays.asList("hot", "dot",
 				"dog", "lot", "log"));
-		ArrayList<ArrayList<String>> results = solution.findLadders(start, end,
+		ArrayList<ArrayList<String>> ret= solution.findLadders(start, end,
 				dict);
-
-		for (ArrayList<String> item : results) {
-			for (String i : item) {
-				System.out.print(i+" ");
-			}
-
-			System.out.println();
-		}
+		System.out.println(ret.toString());
 
 	}
 }

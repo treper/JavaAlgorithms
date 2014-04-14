@@ -54,23 +54,21 @@ public class PalindromePartitioning {
 
 	public void dfs(String s, boolean[][] map, int start,
 			ArrayList<String> path, ArrayList<ArrayList<String>> ret) {
-		if (start >= s.length()) {
+		if (start == s.length()) {
 			ArrayList<String> npath = new ArrayList<String>(path);
-			Collections.reverse(npath);			
+			Collections.reverse(npath);
 			ret.add(npath);
-			System.out.println("ret:"+ret);
+			//System.out.println("ret:" + ret);
 			return;
 		}
 
 		for (int i = start; i < s.length(); i++) {
-			for (int j = i; j < s.length(); j++) {
-				if (map[i][j]) {
-					path.add(0, s.substring(i, j+1));
-					System.out.println("push back path:"+path);
-					dfs(s, map, start+j+1-i, path, ret);
-					path.remove(0);
-					System.out.println("pop back path:"+path);
-				}  
+			if (map[start][i]) {
+				path.add(0, s.substring(start, i + 1));
+				//System.out.println("push back path:" + path);
+				dfs(s, map, i + 1, path, ret);
+				path.remove(0);
+				//System.out.println("pop back path:" + path);
 			}
 		}
 	}
@@ -79,13 +77,7 @@ public class PalindromePartitioning {
 		PalindromePartitioning solution = new PalindromePartitioning();
 		String s = new String("aab");
 		ArrayList<ArrayList<String>> ret = solution.partition(s);
-
-		for (ArrayList<String> l : ret) {
-			for (String i : l) {
-				System.out.print(i + " ");
-			}
-			System.out.println();
-		}
+		System.out.println(ret.toString());
 	}
 
 }
