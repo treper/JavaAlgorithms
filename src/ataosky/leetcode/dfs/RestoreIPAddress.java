@@ -25,31 +25,20 @@ public class RestoreIPAddress {
 		if (s.length() - start < (4 - step))
 			return;
 
-		//StringBuilder npath = new StringBuilder(path);
 		int num = 0;
 		for (int i = start; i < s.length(); i++) {
-			num += num * 10 + (s.charAt(i) - '0');
-			path.append(s.charAt(i));
+			num = num * 10 + (s.charAt(i) - '0');
 			if (num <= 255) {
+				//System.out.println(num+" "+path.toString());
 				StringBuilder npath = new StringBuilder(path);
+				npath.append(String.valueOf(num));
 				npath.append(".");
 				dfs(s, i + 1, step + 1, npath, ret);
 			}
 			if (num == 0)
 				break;
 		}
-		// for (int i = start; i < start + 3 && i<s.length(); i++) {
-		// String sb = s.substring(start, i + 1);
-		// if(s.length()==1&&sb.equals("0"))
-		// break;
-		// int num = Integer.parseInt(sb);
-		// if (num <=255) {
-		// StringBuilder npath = new StringBuilder(path);
-		// npath.append(s.substring(start, i+1)).append(".");
-		// dfs(s,i+1,step+1,npath,ret);
-		// }
-		//
-		// }
+
 	}
 
 	public void dfs2(String s, int start, int step, StringBuilder path,
@@ -87,8 +76,8 @@ public class RestoreIPAddress {
 		RestoreIPAddress solution = new RestoreIPAddress();
 		// ArrayList<String> ret = solution.restoreIpAddresses("25525511135");
 		// ArrayList<String> ret = solution.restoreIpAddresses("0000");
-		// ArrayList<String> ret = solution.restoreIpAddresses("010010");
-		ArrayList<String> ret = solution.restoreIpAddresses("172162541");// ["17.216.25.41","17.216.254.1","172.16.25.41","172.16.254.1","172.162.5.41","172.162.54.1"]
+		 ArrayList<String> ret = solution.restoreIpAddresses("010010");
+		//ArrayList<String> ret = solution.restoreIpAddresses("172162541");// ["17.216.25.41","17.216.254.1","172.16.25.41","172.16.254.1","172.162.5.41","172.162.54.1"]
 		System.out.println(ret.toString());
 	}
 
