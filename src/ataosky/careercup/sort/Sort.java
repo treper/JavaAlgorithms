@@ -1,5 +1,8 @@
 package ataosky.careercup.sort;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 //different sort algorithms
 public class Sort {
 	public void swap(int[] array, int l, int r) {
@@ -15,11 +18,18 @@ public class Sort {
 		for (int j = l; j < r; j++) {
 			if (array[j] < x) {
 				i++;
+				//System.out.println("swap "+array[i]+" "+array[j]);
 				swap(array, i, j);
+				
+//				for(int k:array)
+//				System.out.print(k+" ");
+//				System.out.println();
 
 			}
+			//System.out.println();
 		}
-		swap(array, i + 1, r);
+//		swap(array, i + 1, r);
+//		System.out.println("special swap "+array[i+1]+" "+array[r]);
 		return i + 1;
 
 	}
@@ -27,6 +37,7 @@ public class Sort {
 	public void qsort(int[] array, int l, int r) {
 		if (l < r) {
 			int mid = partition(array, l, r);
+			System.out.println("sort "+l+" mid "+mid+" to "+r);
 			qsort(array, l, mid - 1);
 			qsort(array, mid + 1, r);
 		}
