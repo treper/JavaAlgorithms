@@ -6,6 +6,7 @@ import java.util.Arrays;
 //different sort algorithms
 public class Sort {
 	public void swap(int[] array, int l, int r) {
+		if(l==r)return;
 		int tmp = array[l];
 		array[l] = array[r];
 		array[r] = tmp;
@@ -28,7 +29,7 @@ public class Sort {
 			}
 			//System.out.println();
 		}
-//		swap(array, i + 1, r);
+		swap(array, i + 1, r);
 //		System.out.println("special swap "+array[i+1]+" "+array[r]);
 		return i + 1;
 
@@ -45,7 +46,7 @@ public class Sort {
 
 	public static void main(String args[]) {
 		Sort solution = new Sort();
-		int[] a={3,2,6,4,1,7,0,9};
+		int[] a={3,2,6,4,1,7,0,9,5};
 		solution.qsort(a,0,a.length-1);
 		for(int i:a){
 		System.out.print(i);
