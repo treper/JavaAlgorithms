@@ -1,4 +1,4 @@
-package ataosky.practice.concurrency;
+package ataosky.example.concurrency;
 
 public class LockSummary_SubMain {
 	public static void main(String args[]) {

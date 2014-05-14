@@ -1,4 +1,4 @@
-package ataosky.practice.concurrency;
+package ataosky.example.concurrency;
  
 
 import java.util.concurrent.BrokenBarrierException;

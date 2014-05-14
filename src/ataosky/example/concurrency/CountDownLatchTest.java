@@ -1,4 +1,4 @@
-package ataosky.practice.concurrency;
+package ataosky.example.concurrency;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
