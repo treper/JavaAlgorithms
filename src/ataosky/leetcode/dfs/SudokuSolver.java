@@ -17,7 +17,7 @@ public class SudokuSolver {
         
     }
     
-    public void dfs(char[][] board,)
+    public void dfs(char[][] board)
     {
     	
     }
