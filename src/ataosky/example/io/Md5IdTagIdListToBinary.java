@@ -11,7 +11,10 @@ import java.nio.ByteBuffer;
 import java.util.ArrayList;
 
 import org.apache.commons.lang.ArrayUtils;
- 
+/*
+* this code convert md5Id_tagId_list of such format to google open source all pair similarity's input format little edian
+ * http://code.google.com/p/google-all-pairs-similarity-search
+ * */
 public class Md5IdTagIdListToBinary {
 	
 	public static void main(String[] args) throws IOException

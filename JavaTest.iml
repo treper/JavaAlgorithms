@@ -15,7 +15,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="module-library">
       <library name="jcip-examples-src.jar">
         <CLASSES>
@@ -38,6 +38,24 @@
       <library name="jcip-annotations-src.jar">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/jcip-annotations-src.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/hadoop-core-1.2.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/sqoop-1.4.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
