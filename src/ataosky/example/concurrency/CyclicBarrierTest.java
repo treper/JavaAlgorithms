@@ -5,11 +5,13 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/*reference:http://my.oschina.net/lifany/blog/207995
+**/
 public class CyclicBarrierTest {
 	static AtomicInteger count=new AtomicInteger(1);
 	public static void main(String[] args) {
 		ExecutorService service = Executors.newCachedThreadPool();
-		
+		//CyclicBarrier构造函数第二个为释放后运行的Runnable
 		final  CyclicBarrier cb = new CyclicBarrier(3,new Runnable() {
 			public void run() {
 			  System.out.println(Thread.currentThread().getName()+"第"+count.getAndIncrement()+"个轮回");

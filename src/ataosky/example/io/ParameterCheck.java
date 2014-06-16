@@ -6,7 +6,6 @@ package ataosky.example.io;
  */
 public class ParameterCheck{
     public static void main(String[] args) {
-
-
+        System.out.println("args = [" + args + "]");
     }
 }
