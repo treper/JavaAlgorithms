@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../realtime/storm-forex" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../realtime/storm-kafka" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../zookeeper-samples" vcs="Git" />
   </component>
 </project>
 
