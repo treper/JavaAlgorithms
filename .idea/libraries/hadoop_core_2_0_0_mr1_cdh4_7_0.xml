@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hadoop-core-2.0.0-mr1-cdh4.7.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/hadoop-core-2.0.0-mr1-cdh4.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

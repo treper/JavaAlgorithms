@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hive-exec-0.10.0-cdh4.7.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/hive-exec-0.10.0-cdh4.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

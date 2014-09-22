@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaTest.iml" filepath="$PROJECT_DIR$/JavaTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../zookeeper-samples/zookeeper-samples.iml" filepath="$PROJECT_DIR$/../zookeeper-samples/zookeeper-samples.iml" />
     </modules>
   </component>
 </project>

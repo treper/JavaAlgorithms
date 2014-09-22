@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hadoop-common-2.0.0-cdh4.2.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/hadoop-common-2.0.0-cdh4.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
